@@ -1,0 +1,102 @@
+.header {
+    padding: 16px 0;
+
+    .container {
+        display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include vp-768 {
+        gap: 40px;
+        grid-template-columns: 2fr 3fr;
+    }
+    }
+}
+.header__text {
+    display: flex;
+    align-items: end;
+    gap: 25px;
+
+    @include vp-768 {
+        gap: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $color-default-black;
+    }
+}
+.header__logo {
+    @each $property, $value in $font-logo {
+        #{$property}: $value;
+    }
+    line-height: 32px;
+}
+.header__nav {
+
+display: none;
+@include vp-768 {
+    display: block;
+}
+}
+.header__nav-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+    list-style-type: none;
+
+    @each $property, $value in $font-text {
+        #{$property}: $value;
+    }
+}
+.header__nav-item {
+}
+.header__nav-link {
+    transition: 0.2s;
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: 60%;
+        transition: 0.2s;
+    }
+}
+.header__links {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+
+        align-items: end;
+}
+.header__contact-info {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    @each $property, $value in $font-text {
+        #{$property}: $value;
+    }
+}
+.header__email-link {
+    display: none;
+
+    @include vp-1024 {
+        display: inline;
+    }
+}
+.header__phone-link {
+}
+.header__socials {
+    display: none;
+
+    @include vp-1024 {
+        display: flex;
+        gap: 10px;
+        align-items: end;
+    }
+}
+.header__social-link {
+}
+.header__social-link--whatsapp {
+}
+.arrow {
+}
+.header__social-link--vk {
+}
+.header__social-link--telegram {
+}

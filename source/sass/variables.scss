@@ -4,8 +4,13 @@
 // Default
 
 $color-default-black:               #000000;
+$color-default-black-40:               #00000066;
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
+$color-green:                       #36453F;
+$color-gray:                        #757575;
+
+
 
 
 // Gradient
@@ -21,6 +26,7 @@ $fz-default:                        16px;
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-default:                        'Exo2', "Arial", sans-serif;
+$ff-roboto:                        sans-serif;
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
 // Animation
@@ -50,3 +56,52 @@ $vp-1920:                           1920px;
 
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;
+
+
+
+$font-header: (
+    font-family: $ff-default,
+    font-size: 40px,
+    font-weight: 700,
+    line-height: 52px,
+);
+
+$font-description: (
+    font-family: $ff-default,
+    font-size: 16px,
+    font-weight: 400,
+    line-height: 25px,
+);
+
+$font-link: (
+    font-family: $ff-default,
+    font-size: 17px,
+    font-weight: 500,
+    line-height: 19.2px,
+);
+
+$font-logo: (
+    font-family: $ff-default,
+    font-size: 32px,
+    font-weight: 700,
+    line-height: 19.2px,
+    text-align: left,
+    text-transform: uppercase,    
+);
+
+$font-text: (
+    font-family: $ff-default,
+    font-size: 16px,
+    font-weight: 500,
+    line-height: 19.2px,
+    text-align: left,
+);
+
+
+
+$font-button: (
+    font-family: $ff-roboto,
+    font-size: 16px,
+    font-weight: 500,
+    line-height: 17.6px,
+);

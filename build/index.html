@@ -1,38 +1,185 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Фортик">
 
-    <title>Фортик</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Фортик">
 
-    <!-- <link rel="icon" href="favicon.ico">
+  <title>Фортик</title>
+
+  <!-- <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest"> -->
 
-    <link rel="preload" href="fonts/exo2-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/exo2-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/exo2-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <div class="container">
-          <h1>test</h1>
+  <link rel="preload" href="fonts/exo2-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/exo2-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/exo2-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__text">
+          <div class="header__logo">Фортик</div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item"><a href="#" class="header__nav-link">Услуги</a></li>
+              <li class="header__nav-item"><a href="#" class="header__nav-link">Контакты</a></li>
+            </ul>
+          </nav>
         </div>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+        <div class="header__links">
+          <div class="header__contact-info">
+            <a href="mailto:fortik@gmail.com" class="header__email-link">fortik@gmail.com</a>
+            <a href="tel:+79779394403" class="header__phone-link">+7 (977) 939-44-03</a>
+          </div>
+          <div class="header__socials">
+            <a href="#" class="header__social-link header__social-link--whatsapp" aria-label="WhatsApp">
+              <svg width="36" height="15" viewBox="0 0 36 15" role="img">
+                <use href="img/sprite.svg#whatsapp-logo"></use>
+              </svg>
+            </a>
+            <a href="#" class="header__social-link header__social-link--vk" aria-label="ВКонтакте">
+              <svg width="36" height="15" viewBox="0 0 36 15" role="img">
+                <use href="img/sprite.svg#vk-logo"></use>
+              </svg>
+            </a>
+            <a href="#" class="header__social-link header__social-link--telegram" aria-label="Telegram">
+              <svg width="36" height="15" viewBox="0 0 36 15" role="img">
+                <use href="img/sprite.svg#telegram-logo"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container container--no-pading">
+        <div class="hero content">
+          <div class="hero-content">
+            <h1 class="hero-content__title">Строительная компания "Фортик"</h1>
+            <p class="hero-content__text">Мы небольшая семейная строительная компания "Фортик". Занимаемся
+              строительством с 1996 года. Работаем по Московской и Тульской области.</p>
+            <div class="hero__buttons hero__buttons--desktop">
+              <a href="#" class="hero-content__button hero-content__button--dark">Заказать звонок</a>
+              <a href="#" class="hero-content__button">Написать в WhatsApp</a>
+              <a href="#" class="hero-content__button">Написать в Telegram</a>
+            </div>
+            <a href="#" class="hero-content__link">Смотреть проекты
+              <svg width="36" height="15" viewBox="0 0 36 15" role="img">
+                <use href="img/sprite.svg#arrow-next"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="hero-slider swiper">
+            <div class="hero-slider__slides swiper-wrapper">
+              <div class="hero-slider__slide swiper-slide">
+                <div class="hero-slider__slide-image">
+                  <picture>
+                    <img src="img/main-slider/slide-1.jpg" alt="Слайд 1" width="770" height="500">
+                  </picture>
+                </div>
+              </div>
+              <div class="hero-slider__slide swiper-slide">
+                <div class="hero-slider__slide-image">
+                  <picture>
+                    <img src="img/main-slider/slide-2.jpg" alt="Слайд 2" width="770" height="500">
+                  </picture>
+                </div>
+              </div>
+              <div class="hero-slider__slide swiper-slide">
+                <div class="hero-slider__slide-image">
+                  <picture>
+                    <img src="img/main-slider/slide-3.jpg" alt="Слайд 3" width="770" height="500">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="hero-slider__navigation">
+              <div class="hero-slider__arrows">
+                <button class="hero-slider__arrow hero-slider__arrow--prev swiper-button-prev">
+                  <svg width="36" height="15" viewBox="0 0 36 15" role="img">
+                    <use href="img/sprite.svg#arrow-prev"></use>
+                  </svg>
+                </button>
+                <!-- <svg class="line" width="1" height="27" viewBox="0 0 1 27" xmlns="http://www.w3.org/2000/svg">
+                  <line x1="0.5" x2="0.5" y2="27" stroke="white" />
+                </svg> -->
+                <button class="hero-slider__arrow hero-slider__arrow--next swiper-button-next">
+                  <svg width="36" height="15" viewBox="0 0 36 15" role="img">
+                    <use href="img/sprite.svg#arrow-next"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="hero__buttons hero__buttons--mobile">
+                <a href="#" class="hero-content__button hero-content__button--dark">Заказать звонок</a>
+                <a href="#" class="hero-content__button">Написать в WhatsApp</a>
+                <a href="#" class="hero-content__button">Написать в Telegram</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="advantages">
+        <div class="container">
+          <h2 class="visually-hidden">Наши преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <div class="advantages__item-icon">
+                <svg width="25" height="25" viewBox="0 0 25 25" role="img">
+                  <use href="img/sprite.svg#advantage-icon-1"></use>
+                </svg>
+              </div>
+              <div class="advantages__item-text">3 года га&shy;ран&shy;тии на все ра&shy;бо&shy;ты</div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-icon">
+                <svg width="25" height="25" viewBox="0 0 25 25" role="img">
+                  <use href="img/sprite.svg#advantage-icon-2"></use>
+                </svg>
+              </div>
+              <div class="advantages__item-text">Своя тор&shy;го&shy;во-про&shy;из&shy;водст&shy;вен&shy;ная база</div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-icon">
+                <svg width="30" height="30" viewBox="0 0 30 30" role="img">
+                  <use href="img/sprite.svg#advantage-icon-3"></use>
+                </svg>
+              </div>
+              <div class="advantages__item-text">На рын&shy;ке бо&shy;лее 25 лет</div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-icon">
+                <svg width="24" height="21" viewBox="0 0 24 21" role="img">
+                  <use href="img/sprite.svg#advantage-icon-4"></use>
+                </svg>
+              </div>
+              <div class="advantages__item-text">Га&shy;ран&shy;ти&shy;ру&shy;ем ка&shy;чест&shy;во ма&shy;те&shy;риа&shy;лов</div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__item-icon">
+                <svg width="30" height="30" viewBox="0 0 30 30" role="img">
+                  <use href="img/sprite.svg#advantage-icon-5"></use>
+                </svg>
+              </div>
+              <div class="advantages__item-text">Це&shy;на фик&shy;си&shy;ру&shy;ет&shy;ся на эта&shy;пе под&shy;пи&shy;са&shy;ния до&shy;го&shy;во&shy;ра</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container"></div>
+    </footer>
+  </div>
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
