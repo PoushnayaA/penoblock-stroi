@@ -87,6 +87,11 @@
 
 .dark .content__title-wrapper {
   border-bottom: 1px solid $color-default-white;
+  margin-bottom: 20px;
+
+  @include vp-768 {
+    margin-bottom: 40px;
+  }
 }
 
 .content__title-number {
@@ -126,4 +131,15 @@
   @include vp-768 {
     padding: 60px 0;
   }
+}
+
+.simple-text {
+  @each $property, $value in $font-text {
+    #{$property}: $value;
+}
+
+@include vp-768 {
+  font-size: 20px;
+  line-height: 32px,
+}
 }

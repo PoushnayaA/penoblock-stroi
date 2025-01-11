@@ -18,29 +18,57 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   const advantagesItems = document.querySelectorAll('.advantages__item');
+  const headers = document.querySelectorAll('.price__title-wrapper');
 
-  function changeHeight() {
-    advantagesItems.forEach((item) => {
+  function changeHeight(items, adaptive) {
+    items.forEach((item) => {
       item.style.height = 'auto';
-  });
-    let maxHeight = 0;
+    });
+    if (adaptive) {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 1024) {
+        return
+      } else {
+        let maxHeight = 0;
 
-    advantagesItems.forEach((item) => {
-      const itemHeight = item.offsetHeight;
-      if (itemHeight > maxHeight) {
-          maxHeight = itemHeight;
+        items.forEach((item) => {
+          const itemHeight = item.offsetHeight;
+          if (itemHeight > maxHeight) {
+            maxHeight = itemHeight;
+          }
+        });
+
+        items.forEach((item) => {
+          item.style.height = `${maxHeight}px`;
+        });
       }
-  });
+
+    } else {
+      let maxHeight = 0;
+
+      items.forEach((item) => {
+        const itemHeight = item.offsetHeight;
+        if (itemHeight > maxHeight) {
+          maxHeight = itemHeight;
+        }
+      });
 
 
-  advantagesItems.forEach((item) => {
-      item.style.height = `${maxHeight}px`;
-  });
-}
+      items.forEach((item) => {
+        item.style.height = `${maxHeight}px`;
+      });
+    }
+  }
 
-window.addEventListener('load', changeHeight);
+  window.addEventListener('load', () => {
+    changeHeight(advantagesItems, false);
+    changeHeight(headers, true);
+});
 
-window.addEventListener('resize', changeHeight);
+window.addEventListener('resize', () => {
+    changeHeight(advantagesItems, false);
+    changeHeight(headers, true);
+});
 
 
 
