@@ -67,12 +67,63 @@
 
   @include vp-768 {
     padding: 60px 0;
+  }
+
+  color: $color-default-black;
 }
+
+.content__title-wrapper {
+  padding-bottom: 12px;
+  border-bottom: 1px solid $color-default-black;
+
+  @include vp-768 {
+    padding-bottom: 18px;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.dark .content__title-wrapper {
+  border-bottom: 1px solid $color-default-white;
+}
+
+.content__title-number {
+  @each $property, $value in $font-decoration {
+    #{$property}: $value;
+  }
+
+  @include vp-768 {
+    @each $property, $value in $font-decoration-desktop {
+      #{$property}: $value;
+    }
+  }
+}
+
+.content__title {
+  margin: 0;
+
+  @each $property, $value in $font-decoration {
+    #{$property}: $value;
+  }
+
+  @include vp-768 {
+    @each $property, $value in $font-decoration-desktop {
+      #{$property}: $value;
+    }
+  }
+}
+
+.dark {
+  background-color: $color-green;
+  color: $color-default-white;
 }
 
 .hero.content {
-  padding-bottom: 0;
+  padding: 0;
+
   @include vp-768 {
     padding: 60px 0;
-}
+  }
 }

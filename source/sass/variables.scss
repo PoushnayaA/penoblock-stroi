@@ -105,3 +105,18 @@ $font-button: (
     font-weight: 500,
     line-height: 17.6px,
 );
+
+$font-decoration: (
+    font-family: $ff-roboto,
+    font-size: 28px,
+    font-weight: 700,
+    line-height: 44px,
+);
+
+$font-decoration-desktop: (
+    font-family: $ff-roboto,
+    font-size: 44px,
+    font-weight: 700,
+    line-height: 44px,
+);
+

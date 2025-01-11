@@ -76,6 +76,12 @@ textarea {
   }
 }
 
+button , a {
+  appearance:  none !important;
+  color:  currentColor;
+}
+
+
 select {
   border-radius: 0;
 }
