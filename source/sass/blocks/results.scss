@@ -1,0 +1,90 @@
+.tabs {
+    margin-top: 20px;
+    
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    @include vp-768 {
+        margin-top: 40px;
+        justify-content: space-between;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            height: 1.5px;
+            left: 0;
+            width: 100%;
+            background-color: $color-default-black-40;
+            z-index: 1;
+        }
+    }
+
+    position: relative;
+
+    
+}
+
+.tab-button {
+    padding: 10px 10px;
+    background-color: transparent;
+    cursor: pointer;
+    color: $color-default-black-40;
+
+    text-transform: uppercase;
+
+    @each $property, $value in $font-tabs {
+        #{$property}: $value;
+    }
+
+    border: none;
+
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    
+
+    @include vp-768 {
+        padding: 10px 20px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            height: 1.5px;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            z-index: 1;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}
+
+.tab-button.active {
+    position: relative;
+    color: $color-default-black;
+    
+
+    @include vp-768 {
+        &::after {
+            background-color: $color-default-black;
+        }
+    }
+}
+
+// .tab-content {
+//     border: 1px solid #ccc;
+//     padding: 20px;
+// }
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}

@@ -14,7 +14,7 @@
 .hero-content {
     position: absolute;
     z-index: 2;
-    padding: 20px;
+    padding: 22px;
     max-width: 70%;
 
 
@@ -180,6 +180,12 @@
 .hero-slider {
     width: 100%;
     position: relative;
+    height: 100%;
+    min-height: 700px;
+
+    @include vp-768 {
+        min-height: unset;
+    }
 }
 
 .hero-slider__arrows {
@@ -198,7 +204,7 @@
     transform: translateX(-50%);
     color: $color-default-white;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 22px;
 
     @include vp-768 {
         bottom: 20px;

@@ -26,6 +26,11 @@
     @each $property, $value in $font-logo {
         #{$property}: $value;
     }
+    font-size: 28px;
+
+    @include vp-768 {
+        font-size: 32px;
+    }
     line-height: 32px;
 }
 .header__nav {
@@ -62,7 +67,15 @@ display: none;
     justify-content: end;
     gap: 10px;
 
-        align-items: end;
+        align-items: center;
+
+        a {
+            &:hover,
+            &:focus,
+            &:active {
+                opacity: 60%;
+            }
+        }
 }
 .header__contact-info {
     display: flex;
@@ -78,8 +91,23 @@ display: none;
     @include vp-1024 {
         display: inline;
     }
+    @each $property, $value in $font-link {
+        #{$property}: $value;
+    }
+    font-size: 12px;
+    @include vp-768 {
+        font-size: 17px;
+    }
 }
 .header__phone-link {
+    @each $property, $value in $font-link {
+        #{$property}: $value;
+    }
+    font-size: 12px;
+    @include vp-768 {
+        font-size: 17px;
+    }
+    
 }
 .header__socials {
     display: none;

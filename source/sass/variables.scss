@@ -147,3 +147,25 @@ $font-header-2: (
     font-weight: 600,
     line-height: 25.6px,
 );
+
+
+$font-bold-text: (
+    font-family: $ff-default,
+    font-size: 24px,
+    font-weight: 700,
+    line-height: 40px,
+);
+
+$font-medium-text: (
+    font-family: $ff-default,
+    font-size: 24px,
+    font-weight: 500,
+    line-height: 40px,
+);
+
+$font-tabs: (
+    font-family: $ff-default,
+    font-size: 12px,
+    font-weight: 700,
+    line-height: 44px,
+);
