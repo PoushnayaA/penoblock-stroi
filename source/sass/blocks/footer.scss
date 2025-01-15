@@ -2,6 +2,7 @@ footer {
     background-color: $color-default-black;
     color: $color-default-white;
 }
+
 .footer__list {
     display: flex;
     flex-direction: column;
@@ -21,18 +22,21 @@ footer {
         margin-right: auto;
     }
 }
+
 .footer__item {
     text-align: center;
-padding: 0;
-margin: 0;
+    padding: 0;
+    margin: 0;
+
     @each $property, $value in $font-link {
         #{$property}: $value;
     }
 
     a {
         transition: all 0.3s ease;
+
         &:hover,
-        &:focus,    
+        &:focus,
         &:active {
             opacity: 70%;
         }

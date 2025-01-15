@@ -24,7 +24,7 @@
         }
     }
 
-    position: relative;    
+    position: relative;
 }
 
 .tab-button {
@@ -37,6 +37,7 @@
     &:last-child {
         padding-right: 0;
     }
+
     background-color: transparent;
     cursor: pointer;
     color: $color-default-black-40;
@@ -53,6 +54,7 @@
 
     @include vp-1024 {
         padding: 10px 20px;
+
         &::after {
             content: "";
             position: absolute;
@@ -70,7 +72,7 @@
 .tab-button.active {
     position: relative;
     color: $color-default-black;
-    
+
     @include vp-1024 {
         &::after {
             background-color: $color-default-black;
@@ -102,14 +104,17 @@
     height: 100%;
     min-height: unset;
     max-height: 350px;
+    height: 350px;
 
-    @include vp-768 {
+    @include vp-1024 {
         max-height: unset;
+        height: 680px;
     }
 
     .hero-slider__slide-image {
         height: 100%;
         filter: brightness(85%);
+
     }
 
     .hero-slider__slide-image {
@@ -129,9 +134,11 @@
 
 .result__name {
     text-transform: uppercase;
+
     @each $property, $value in $font-title {
         #{$property}: $value;
     }
+
     margin: 10px 0 0;
 }
 
@@ -141,6 +148,7 @@
     @include vp-1024 {
         margin: 35px 0;
     }
+
     @each $property, $value in $font-description {
         #{$property}: $value;
     }
@@ -162,6 +170,7 @@
     @each $property, $value in $font-tabs {
         #{$property}: $value;
     }
+
     line-height: 20px;
     font-size: 15px;
     display: flex;
@@ -172,12 +181,21 @@
         @each $property, $value in $font-tabs {
             #{$property}: $value;
         }
+
         line-height: 20px;
         font-size: 15px;
     }
 
     .grey {
         opacity: 0.4;
+    }
+}
+
+.result__text-wrapper {
+    @include vp-1024 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
@@ -210,5 +228,6 @@
 
     @include vp-1024 {
         margin-bottom: 0;
+        margin-top: auto;
     }
 }
