@@ -83,6 +83,12 @@
   display: flex;
   justify-content: space-between;
   align-items: end;
+
+  margin-bottom: 20px;
+
+  @include vp-768 {
+    margin-bottom: 40px;
+  }
 }
 
 .dark .content__title-wrapper {

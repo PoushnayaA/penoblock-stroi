@@ -1,0 +1,28 @@
+.form__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+
+    @include vp-1024 {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+}
+.form__text-wrapper {
+}
+.form__title {
+}
+.form__text {
+}
+.form__content {
+}
+.form__field {
+}
+.visually-hidden {
+}
+.form__checkbox {
+}
+.form__button {
+}

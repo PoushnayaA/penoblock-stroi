@@ -8,7 +8,7 @@ $color-default-black-40:               #00000066;
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
 $color-green:                       #36453F;
-$color-gray:                        #757575;
+$color-grey:                        #757575;
 
 
 
@@ -168,4 +168,11 @@ $font-tabs: (
     font-size: 12px,
     font-weight: 700,
     line-height: 44px,
+);
+
+$font-title: (
+    font-family: $ff-default,
+    font-size: 36px,
+    font-weight: 700,
+    line-height: 40px,
 );

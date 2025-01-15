@@ -8,12 +8,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
 
-  new Swiper('.swiper', {
+  new Swiper('.js-hero-slider', {
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+  });
+
+  const swipers = document.querySelectorAll('.js-results-swiper');
+  swipers.forEach((swiperElement) => {
+      new Swiper(swiperElement, {
+          loop: true,
+          navigation: {
+            nextEl: swiperElement.querySelector('.swiper-button-next'),
+            prevEl: swiperElement.querySelector('.swiper-button-prev'),
+          },
+      });
   });
 
 
