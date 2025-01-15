@@ -1,5 +1,4 @@
-.about__wrapper {
-}
+
 .about__image {
     margin: 20px 0;
 
@@ -19,8 +18,7 @@
         object-position: 50% 60%;
     }
 }
-.about__text-wrapper {
-}
+
 .about__text {
     @each $property, $value in $font-description {
         #{$property}: $value;

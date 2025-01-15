@@ -2304,12 +2304,7 @@ button,
 
 .contacts__map {
   width: 100%;
-  height: 250px;
-}
-@media (min-width: 1024px) {
-  .contacts__map {
-    height: 400px;
-  }
+  height: 400px;
 }
 .contacts__map .contacts__map-tag {
   height: 100%;
@@ -2528,6 +2523,7 @@ button,
   width: 100%;
   display: block;
   margin-right: 0;
+  cursor: pointer;
   font-family: "Exo2", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -2564,6 +2560,123 @@ button,
   }
 }
 
+.form__text-wrapper {
+  margin: auto 0;
+}
+
+.form__title {
+  margin: 0 0 10px;
+  font-family: "Exo2", "Arial", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 44px;
+}
+@media (min-width: 768px) {
+  .form__title {
+    margin: 0 0 20px;
+    font-family: "Exo2", "Arial", sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 44px;
+  }
+}
+
+.form__text {
+  font-family: "Exo2", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .form__text {
+    margin-top: 20px;
+  }
+}
+
+.form__content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  font-family: "Exo2", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.form__field input, .form__field textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.0431372549);
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15) inset;
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+.checkbox {
+  margin-top: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.checkbox-label {
+  padding-left: 5px;
+}
+
+.checkbox-input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.0431372549);
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15) inset !important;
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15) inset !important;
+  cursor: pointer;
+}
+
+.checkbox-input::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -4px;
+  width: 0px;
+  height: 0px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='30' viewBox='0 -960 960 960' width='30' stroke='%2336453F' stroke-width='30' fill='%2336453F'%3E%3Cpath d='M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.checkbox-input:checked::after,
+.radio-input:checked::after {
+  width: 24px;
+  height: 24px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
 footer {
   background-color: #000000;
   color: #ffffff;
@@ -2588,17 +2701,24 @@ footer {
 }
 @media (min-width: 768px) {
   .footer__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .footer__item {
+  text-align: center;
   padding: 0;
   margin: 0;
   font-family: "Exo2", "Arial", sans-serif;

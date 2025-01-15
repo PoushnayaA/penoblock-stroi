@@ -1,6 +1,5 @@
 .tabs {
     margin-top: 20px;
-    
     display: flex;
     margin-bottom: 10px;
     width: 100%;
@@ -25,9 +24,7 @@
         }
     }
 
-    position: relative;
-
-    
+    position: relative;    
 }
 
 .tab-button {
@@ -51,10 +48,8 @@
     }
 
     border: none;
-
     position: relative;
     transition: all 0.2s ease-in-out;
-    
 
     @include vp-1024 {
         padding: 10px 20px;
@@ -76,7 +71,6 @@
     position: relative;
     color: $color-default-black;
     
-
     @include vp-1024 {
         &::after {
             background-color: $color-default-black;
@@ -125,17 +119,14 @@
     }
 }
 
-.result__text-wrapper {
-
-}
 .result__title {
     margin: 0 0 10px;
-    
 
     @each $property, $value in $font-title {
         #{$property}: $value;
     }
 }
+
 .result__name {
     text-transform: uppercase;
     @each $property, $value in $font-title {
@@ -143,6 +134,7 @@
     }
     margin: 10px 0 0;
 }
+
 .result__text {
     margin: 15px 0;
 
@@ -153,6 +145,7 @@
         #{$property}: $value;
     }
 }
+
 .result__price-list {
     display: grid;
     gap: 25px;
@@ -164,6 +157,7 @@
 
     margin-bottom: 20px;
 }
+
 .result__price-item {
     @each $property, $value in $font-tabs {
         #{$property}: $value;
@@ -175,13 +169,13 @@
     gap: 5px;
 
     .bold {
-        
         @each $property, $value in $font-tabs {
             #{$property}: $value;
         }
         line-height: 20px;
         font-size: 15px;
     }
+
     .grey {
         opacity: 0.4;
     }
@@ -198,6 +192,7 @@
     width: 100%;
     display: block;
     margin-right: 0;
+    cursor: pointer;
 
     &:hover,
     &:focus,
@@ -205,7 +200,6 @@
         opacity: 60%;
         transition: 0.3s;
     }
-
 
     @each $property, $value in $font-button {
         #{$property}: $value;

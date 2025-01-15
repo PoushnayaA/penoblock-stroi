@@ -11,18 +11,96 @@
     }
 }
 .form__text-wrapper {
+    margin: auto 0;
 }
 .form__title {
+    margin: 0 0 10px;
+    @each $property, $value in $font-decoration {
+        #{$property}: $value;
+    }
+    @include vp-768 {
+        margin: 0 0 20px;
+        @each $property, $value in $font-decoration-desktop {
+            #{$property}: $value;
+        }
+    }
+
+    
 }
 .form__text {
+    @each $property, $value in $font-description {
+        #{$property}: $value;
+    }
+    margin: 0;
+    @include vp-768 {
+        margin-top: 20px;
+    }
 }
-.form__content {
+.form__content form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    
+    @each $property, $value in $font-description {
+        #{$property}: $value;
+    }
 }
 .form__field {
+    input, textarea {
+        border: none;
+        border: 1px solid #0000000b;
+        border-radius: 4px;
+        width: 100%;
+        padding: 12px;
+        box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15) inset;
+
+    }
 }
-.visually-hidden {
+
+.checkbox {
+  margin-top: 5px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.form__checkbox {
+
+.checkbox-label {
+  padding-left: 5px;
 }
-.form__button {
+
+.checkbox-input {
+  appearance: none;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background: $color-default-white;
+  border-radius: 4px;
+  border: 1px solid #0000000b;
+  transition: 500ms;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15) inset !important;
+  cursor: pointer;
+
 }
+
+.checkbox-input::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -4px;
+  width: 0px;
+  height: 0px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='30' viewBox='0 -960 960 960' width='30' stroke='%2336453F' stroke-width='30' fill='%2336453F'%3E%3Cpath d='M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  transition: 500ms;
+}
+
+
+.checkbox-input:checked::after,
+.radio-input:checked::after {
+  width: 24px;
+  height: 24px;
+  transition: 500ms;
+}
+

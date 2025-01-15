@@ -1,5 +1,3 @@
-.price {}
-
 .price__list {
     list-style-type: none;
     display: grid;
@@ -42,7 +40,6 @@
         #{$property}: $value;
     }
 
-
     @include vp-1024 {
         @each $property, $value in $font-decoration-2-desktop {
             #{$property}: $value;
@@ -80,7 +77,6 @@
     margin: 10px 0;
     text-align: center;
     max-width: 280px;
-
 }
 
 .price__value-list {
@@ -92,7 +88,6 @@
     @each $property, $value in $font-header-2 {
         #{$property}: $value;
     }
-
 }
 
 .price__value-item {
@@ -115,7 +110,6 @@
         opacity: 60%;
         transition: 0.3s;
     }
-
 
     @each $property, $value in $font-button {
         #{$property}: $value;

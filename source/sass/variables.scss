@@ -7,7 +7,8 @@ $color-default-black:               #000000;
 $color-default-black-40:               #00000066;
 $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
-$color-green:                       #36453F;
+$color-green:   #36453F;
+$color-default-black-20:               hsla(0, 0%, 0%, 0.2);
 $color-grey:                        #757575;
 
 
@@ -96,8 +97,6 @@ $font-text: (
     line-height: 19.2px,
     text-align: left,
 );
-
-
 
 $font-button: (
     font-family: $ff-default,
